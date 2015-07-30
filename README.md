@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Riak Client for PHP
 
 **Riak PHP Client** is a client which makes it easy to communicate with [Riak](http://basho.com/riak/), an open source, distributed database that focuses on high availability, horizontal scalability, and *predictable*
@@ -96,3 +97,7 @@ Thank you for being part of the community! We love you for it.
 * Author: Alex Moore (https://github.com/alexmoore)
 
 Copyright (c) 2015 Basho Technologies, Inc. Licensed under the Apache License, Version 2.0 (the "License"). For more details, see [License](License).
+=======
+# riak
+uzycie riak 
+>>>>>>> 52434508156e54233924028cafa4854315594212
