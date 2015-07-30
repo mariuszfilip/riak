@@ -21,12 +21,18 @@ use Basho\Riak;
 use Basho\Riak\Command;
 use Basho\Riak\Node;
 
+
+try{
+
 $node = (new Node\Builder)
-    ->atHost('riak-test')
+    ->atHost('localhost')
     ->onPort(8098)
     ->build();
 
+
+
 $riak = new Riak([$node]);
+
 
 $user = new \StdClass();
 $user->name = 'John Doe';
@@ -38,7 +44,10 @@ $command = (new Command\Builder\StoreObject($riak))
     ->buildBucket('users')
     ->build();
 
+
 $response = $command->execute();
+
+
 
 $location = $response->getLocation();
 
@@ -60,3 +69,7 @@ $command = (new Command\Builder\StoreObject($riak))
 $response = $command->execute();
 
 echo $response->getStatusCode() . PHP_EOL;
+
+}catch (Exception $e){
+    var_dump($e->getMessage());
+}
